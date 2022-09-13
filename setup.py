@@ -2,14 +2,14 @@ from distutils.core import setup
 
 setup(
     name="pyegrep",
-    version="1.0.1",
+    version="1.0.2",
     packages=["pyegrep"],
     url="https://github.com/kanz84/pyegrep",
     license="MIT",
     author="kanz84",
     author_email="kanz1384@gmail.com",
     description="A tool for grep",
-    download_url="https://github.com/kanz84/pyegrep/archive/refs/tags/v1.0.1.tar.gz",
+    download_url="https://github.com/kanz84/pyegrep/archive/refs/tags/v1.0.2.tar.gz",
     keywords=["grep", "egrep"],
     install_requires=[],
     classifiers=[
