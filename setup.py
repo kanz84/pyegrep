@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name="pyegrep",
-    version="1.0.0",
+    version="1.0.1",
     packages=["pyegrep"],
     url="https://github.com/kanz84/pyegrep",
     license="MIT",
