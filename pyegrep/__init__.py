@@ -1,1 +1,1 @@
-from greps import grep_service
+from pyegrep.greps import grep_service
