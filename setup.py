@@ -9,7 +9,7 @@ setup(
     author="kanz84",
     author_email="kanz1384@gmail.com",
     description="A tool for grep",
-    download_url="https://github.com/kanz84/pyegrep/archive/refs/tags/v1.0.0.tar.gz",
+    download_url="https://github.com/kanz84/pyegrep/archive/refs/tags/v1.0.1.tar.gz",
     keywords=["grep", "egrep"],
     install_requires=[],
     classifiers=[
