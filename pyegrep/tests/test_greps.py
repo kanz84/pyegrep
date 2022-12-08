@@ -377,3 +377,19 @@ class GrepServiceTest(TestCase):
             self.assertIn("06WWWCCCWWW", outputs)
             self.assertIn("07WWWRRRWWW", outputs)
             self.assertIn("08XXX", outputs)
+
+    def test_grep_regex2(self):
+        lines = [
+            "00QQQ",
+            "01XXX",
+            "abXXY",
+            "02CCC",
+            "03DDD",
+        ]
+        with tempfile.TemporaryDirectory() as temp:
+            file_address = self.write(temp, "file.log", lines)
+            params = {"before": 0, "after": 0, "patterns": [r"[a-z]+"], "is_regex": True, "address": file_address}
+            output = grep_service.grep(params)
+            self.assertEqual(1, len(output))
+            outputs = "".join(output)
+            self.assertIn("abXXY", outputs)

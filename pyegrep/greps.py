@@ -1,6 +1,6 @@
 import re
 
-COLORS_COMPILED_PATTERN = re.compile(r"\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]")
+REMOVE_COLORS_COMPILED_PATTERN = re.compile(r"\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]")
 
 
 class GrepService:
@@ -13,7 +13,7 @@ class GrepService:
                 output += self.grep_in_file(params, file, len(output))
 
         if params.get("hide_colors", False):
-            output = [COLORS_COMPILED_PATTERN.sub("", line) for line in output]
+            output = [REMOVE_COLORS_COMPILED_PATTERN.sub("", line) for line in output]
 
         return output
 
